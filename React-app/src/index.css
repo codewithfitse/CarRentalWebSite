@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.background {
+  width: 100%;
+  height: auto;
+  background-image: url(../public/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.box {
+  padding: 3px 10px;
+  display: flex;
+  justify-content: center;
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 5%, rgba(41, 127, 152, 1) 33%, rgba(32, 201, 103, 1) 76%);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.box:hover {
+  scale: 1.03;
+  box-shadow: 0px 1px 10px #fff;
+}
+
+.box:active {
+  scale: 1;
+  box-shadow: 0px 1px 10px #fff;
+}
+
+.btn {
+  padding: 1px 15px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  background: #2A7B9B;
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 5%, rgba(41, 127, 152, 1) 33%, rgba(32, 201, 103, 1) 76%);  
+}
+
+.btn:hover {
+  box-shadow: 1px 1px 10px #fff;
+  scale: 1.03;
+}
+
+@layer card {
+  .card {
+    @apply backdrop-blur-[6px] rounded-4xl hover:shadow-[#16fe01] hover:shadow-2xl;
+  }
+  .container {
+    @apply backdrop-blur-[6px];
+  }
+}
